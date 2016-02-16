@@ -8,18 +8,34 @@
 
 import UIKit
 
+var myItemList = [String] () // Blink array of strings
+
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var myItemText: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
+    @IBAction func addItem(sender: AnyObject) {
+        // Validate the text filed
+        
+        // Put it on a stack --> array of strings
+        
+        // Clear the text field
+        
+        if myItemText.text?.characters.count > 0 {
+            myItemList.append(myItemText.text!) // Unwrap
+            myItemText.text = "" // Clear the field
+            self.view.endEditing(true) // Make it not editable
+            print(myItemList)
+        }
+        
+    }
 
 }
 
