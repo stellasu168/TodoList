@@ -40,11 +40,15 @@ class FirstViewController: UIViewController, UITableViewDataSource {
     }
 
 
-
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath){
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle:
+        UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath){
         
+            if editingStyle == UITableViewCellEditingStyle.Delete{
+                myItemList.removeAtIndex(indexPath.row)
+                myTableView.reloadData()
+            }
+            
     }
-    
     
     
     
