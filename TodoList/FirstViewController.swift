@@ -40,5 +40,20 @@ class FirstViewController: UIViewController, UITableViewDataSource {
     }
 
 
-}
+
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath){
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+} // End of FirstViewController
 
